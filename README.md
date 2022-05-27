@@ -31,7 +31,7 @@ Remote display for users without an IoT Kits weather station. Preprogrammed!
     *	Micro USB cable. Dollar store varieties are acceptable.
  
 ### Assemble the kit.
-![](/images/Figure 1 - Parts.jpg)
+![](/images/Fig1parts.jpg)
 1.	Lay out the parts on a safe working surface. (Figure 1)
 2.	Place the two long-tailed sockets on the display unit pins. You will not need the short tail sockets or header pins. (Figure 2) 
 3.	Carefully set the D1 Mini onto the pins with the silver case toward the back of the display unit. With the D1 Mini in the correct orientation, you will be soldering on the side with the USB connector. (Figure 3)
