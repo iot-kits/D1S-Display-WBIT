@@ -1,7 +1,7 @@
 # D1S-Display-WBIT
 Remote display for users without an IoT Kits weather station. Preprogrammed!
 
-## Assembly Instructions
+## Assembly and Configuration Instructions
 ### Features:
 *	Obtains localized weather information from WeatherBit.io
 *	Shows current conditions and daily maximum/minimum
