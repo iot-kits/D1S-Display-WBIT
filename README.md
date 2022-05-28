@@ -39,7 +39,7 @@ Remote display for users without an IoT Kits weather station. Preprogrammed!
 6.	Remove the protective film from the display screen. Place the display into the case with the row of pins RST, A0, D0… toward the top. Engage the holes in the display board with the molded bosses of the case. (Figure 4) 
 7.	While pressing the display into the case to keep it flush, place a dab of hot melt glue on each boss. Hot melt is a good choice because it is removable. You can use other glues at your risk. 
 8.	Cut off selected leads from the D1 Mini with diagonal cutters. (Figure 5)    
-   __MAKE SURE YOU UNDERSTAND THIS STEP AND THE FOLLOWING STEP BEFORE YOU CUT!__  
+   __MAKE SURE YOU UNDERSTAND THIS STEP BEFORE YOU CUT!__  
     *	Cut these pins: RST, D0, D5, D7, D8, TX, RX, D3, D4, 5V.  
     *	**DO NOT CUT THESE PINS:** D6, 3V3, D1, D2, G.
 9.	Replace the D1 Mini onto the back of the display unit. Observe the orientation so that pin RST of the D1 Mini engages with RST on the display board. All the pins must match.  
