@@ -78,8 +78,9 @@ This procedure will temporarily turn the weather display into a Wi-Fi access poi
     *	Your Wi-Fi password
     * Your latitude in decimal degrees. Positive for north latitudes, negative for south latitudes.
     *	Your longitude in decimal degrees. Positive for east longitudes, negative for west longitudes.
-    *	Select Imperial of Metric units.
+    *	Select Imperial or Metric units.
     *	Check the Show clock box if you wish to have the unit display local and UTC times.
     *	Select the duration of each display screen.
 6.	The weather display will save the configuration data, connect to your WI-Fi and begin downloading time and weather information.  This may take a minute or so.
 7.	If you ever need to change any parameter, press the reset button on the D1 Mini twice in succession. You may have to do this a few times. The unit goes into configuration mode when the blue LED on the D1 Mini turns on and the configuration reminder screen appears.
+![]/"images/portal.jpg"
