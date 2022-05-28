@@ -52,6 +52,11 @@ The USB connector will line up with the hole on the side of the case. (Figure 6)
 14. Apply the nameplate on the rear of the case. Apply the decorative keyboard label under the display. (Optional)
 15. The assembly is complete.
 
+Solarized dark             |  Solarized Ocean         |  Column 3
+:-------------------------:|:-------------------------:|:-----------------:|
+![](/image/Fig1parts.jpg)  |  ![](https://...Ocean.png)| test             
+col1                      |   col2                    | col3             
+
 ### Configuration
 These instructions are for a cell phone with Wi-Fi capability. The same method could be used with a Wi Fi connected computer. 
 You must be familiar with how to open the Wi-Fi connection settings on your phone, how to open your phone’s web browser, and how to enter an URL into the browser’s address bar.
