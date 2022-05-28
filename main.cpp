@@ -1,23 +1,19 @@
 // D1S-Display-WBIT
-const int FW_VERSION = 1002;
+const int FW_VERSION = 1003;
 
-//! THIS IS FOR DISTRIBUTION
-//! BRANCHED FROM D1S-Display-WBIO-latlon
-
-//! WORKING WELL
-
+// 1003 - 2022-05-28 detect DHT11 in Digital Clock frame,
+//                   remove clock checkbox from WFM,
+//                   remove analog clock frame code
 // 1002 - 2022-05-27 Corrected conversions, replaced vis with bp second wx frame
 // 1001 - 2022-05-23 SAVE!!! WFM working with beta version
 
 // Displays local time and weather exclusively from WeatherBit.io
 /* Configured using WiFiManager captive portal at 192.168.4.1
  ? Data Needed:
- *   WeatherBit.io API key
- *   latitude & longitude 2 decimal places
  *   WiFi credentials (SSID & Password)
- */
-
-// 1001 - 05/08/2022 - add DHT11 sensor
+ *   WeatherBit.io API key
+ *   Latitude & longitude decimal degrees
+  */
 
 /*_____________________________________________________________________________
    Copyright(c) 2018 - 2022 Karl Berger dba IoT Kits https://w4krl.com
@@ -44,8 +40,6 @@ const int FW_VERSION = 1002;
 
 // TODO check UV index
 // TODO add degree symbol
-// TODO remove personal info
-// TODO restore barometer to second weather frame
 
 /*
 ******************************************************
@@ -59,18 +53,18 @@ const int FW_VERSION = 1002;
 #include <Arduino.h>           // PlatformIO
 #include <Wire.h>              // [builtin]
 #include <ESP8266WiFi.h>       // [builtin]
-#include <ArduinoJson.h>       // [manager] v6.19.1
+#include <ArduinoJson.h>       // [manager] v6.19.4 Benoit Blancho https://arduinojson.org/
 #include <ESP8266HTTPClient.h> // [builtin] http
 
 // For Wemos TFT 1.4 display shield
 #include <Adafruit_GFX.h>    // [manager] v1.10.13 Core graphics library
-#include <Adafruit_ST7735.h> // [manager] v1.9.0 Controller chip
+#include <Adafruit_ST7735.h> // [manager] v1.9.3 Controller chip
 #include <SPI.h>             // [builtin]
 #include "colors.h"          // custom frame colors
 
 // For DHT11 sensor
-#include <Adafruit_Sensor.h>
-#include <DHT.h>
+#include <Adafruit_Sensor.h> // v1.1.5 may not be needed
+#include <DHT.h>             // v1.4.3
 
 // Time functions by Rop Gonggrijp https://github.com/ropg/ezTime
 #include <ezTime.h> // [manager] v0.8.3 NTP & timezone
@@ -85,8 +79,8 @@ const int FW_VERSION = 1002;
 #include <LittleFS.h>            // [builtin] LittleFS File System
 #include <DNSServer.h>           // [builtin] For webserver
 #include <ESP8266WebServer.h>    // [builtin] For webserver
-#include <WiFiManager.h>         // [manager] https://github.com/tzapu/WiFiManager
-#include <DoubleResetDetector.h> // [manager] Stephen Denne https://github.com/datacute/DoubleResetDetector
+#include <WiFiManager.h>         // [manager] v2.0.11-beta+sha.9c7fed4 https://github.com/tzapu/WiFiManager
+#include <DoubleResetDetector.h> // [manager] v1.0.3 Stephen Denne https://github.com/datacute/DoubleResetDetector
 /*
 ******************************************************
 *************** COMPILER MACROS **********************
@@ -198,7 +192,8 @@ struct
 } wx;
 
 bool metricUnits = false;
-bool digitalClock = false;
+bool digitalClock = true;
+bool dhtFail = false;
 int screenDuration = 5;
 
 // ********* WIFI MANAGER CONFIG PARAMS ***************
@@ -482,10 +477,10 @@ void readConfig()
           strcpy(wm_wx_dlc, json["wx_dlc"]);
           strcpy(wm_wx_dur, json["wx_dur"]);
 
-          if (strcmp(wm_wx_dlc, "D") == 0)
-          {
-            digitalClock = true;
-          }
+          // if (strcmp(wm_wx_dlc, "D") == 0)
+          // {
+          //   digitalClock = true;
+          // }
           if (strcmp(wm_wx_met, "M") == 0)
           {
             metricUnits = true;
@@ -532,10 +527,10 @@ void writeConfig()
   json["wx_met"] = wm_wx_met;
   json["wx_dlc"] = wm_wx_dlc;
   json["wx_dur"] = wm_wx_dur;
-  if (strcmp(wm_wx_dlc, "D") == 0)
-  {
-    digitalClock = true;
-  }
+  // if (strcmp(wm_wx_dlc, "D") == 0)
+  // {
+  //   digitalClock = true;
+  // }
   if (strcmp(wm_wx_met, "M") == 0)
   {
     metricUnits = true;
@@ -623,7 +618,7 @@ void openWiFiManager()
   // checkbox from https://github.com/kentaylor/WiFiManager/blob/master/examples/ConfigOnSwitchFS/ConfigOnSwitchFS.ino
   char customhtml[24] = "type=\"checkbox\"";
   WiFiManagerParameter custom_wx_dlc("wx_dlc", "Show digital Clock (local & UTC)", "D", 2, customhtml, WFM_LABEL_AFTER);
-  wm.addParameter(&custom_wx_dlc);
+  //  wm.addParameter(&custom_wx_dlc);
 
   // radio buttons for screen durations
   const char *custom_duration_str = "<label for='customDurationID'><br>Set screen durations (seconds):<br></label>"
@@ -1075,194 +1070,6 @@ void almanacFrame()
 
 /*
 ******************************************************
-************* ANALOG CLOCK FRAME *********************
-******************************************************
-*/
-void analogClockFrame(bool firstRender)
-{
-  // 05/12/2022 - added indoor temp/humid
-  // 02/06/2022 - fixed hour hand (deg not rad)
-  const int CENTER_X = SCREEN_W2;
-  const int CENTER_Y = SCREEN_H2;
-  //? scale dimensions from dial radius
-  const int DIAL_RADIUS = SCREEN_H2; // outer clock dial
-  const int NUMERAL_R = DIAL_RADIUS - 6;
-  const int OUTER_TICK_R = NUMERAL_R - 6;
-  const int MIN_TICK_R = OUTER_TICK_R - 3;
-  const int INNER_TICK_R = MIN_TICK_R - 3;
-
-  const int MIN_HAND = INNER_TICK_R;                 // longest hand
-  const int SEC_DOT_R = 3;                           // dot radius at end of second hand
-  const int SEC_HAND = INNER_TICK_R - SEC_DOT_R - 1; // dot with radius 2 on end of hand
-  const int HOUR_HAND = 3 * MIN_HAND / 4;            // hour hand is 3/4 minute hand length
-  const int HUB_R = 4;                               // hub radius
-  int x1, x2, x3, y1, y2, y3;                        // various coordinates
-  int deg;
-  float rad, rad1, rad2, rad3;
-
-  //? draw clock face first time only to speed up graphics
-  if (firstRender)
-  {
-    tft.fillScreen(C_CLOCK_FRAME_BG);
-    tft.drawRoundRect(0, 0, SCREEN_W, SCREEN_H, 8, C_CLOCK_FRAME_EDGE);
-    tft.fillCircle(CENTER_X, CENTER_Y, DIAL_RADIUS, C_CLOCK_DIAL_BG);
-    tft.drawCircle(CENTER_X, CENTER_Y, DIAL_RADIUS + 1, C_CLOCK_DIAL_EDGE);
-    tft.setTextSize(1); // for dial numerals
-    tft.setTextColor(C_CLOCK_DIAL_NUMERALS);
-
-    //? add minute & hour tick marks
-    for (int minTick = 1; minTick < 61; minTick++)
-    {
-      int tickR = MIN_TICK_R;
-      deg = 6 * minTick; // 60 ticks, one every 6 degrees
-      if (deg % 30 == 0) // it is an hour tick
-      {
-        rad = DEGtoRAD(deg);
-        tickR = INNER_TICK_R;
-        // place numeral a little beyond tick line
-        x1 = (CENTER_X + (sin(rad) * NUMERAL_R));
-        y1 = (CENTER_Y - (cos(rad) * NUMERAL_R));
-        tft.setCursor(x1 - 2, y1 - 4); // minus third character width, half height
-        if (minTick / 5 == 12)         // different placement for 12 noon
-        {
-          tft.setCursor(x1 - 5, y1 - 4);
-        }
-        tft.print(minTick / 5);
-      }
-      //? draw tick
-      rad = DEGtoRAD(deg); // Convert degrees to radians
-      x2 = (CENTER_X + (sin(rad) * OUTER_TICK_R));
-      y2 = (CENTER_Y - (cos(rad) * OUTER_TICK_R));
-      x3 = (CENTER_X + (sin(rad) * tickR));
-      y3 = (CENTER_Y - (cos(rad) * tickR));
-      tft.drawLine(x2, y2, x3, y3, C_CLOCK_DIAL_TICKS); // tick line
-    }
-    tft.setTextColor(C_CLOCK_TZ, C_CLOCK_FRAME_BG); // print over dial
-    // show timezone
-    tft.setCursor(3, 8);
-    tft.setTextSize(1);
-    tft.print(getTimezoneName());
-    if (hour() >= 12)
-    {
-      displayFlushRight("PM", 125, 8, 1);
-    }
-    else
-    {
-      displayFlushRight("AM", 125, 8, 1);
-    }
-  } // if firstRender
-
-  //? **** Process second hand ****
-  deg = second() * 6;  // each second advances 6 degrees
-  rad = DEGtoRAD(deg); // Convert degrees to radians
-  static float oldSrad = rad;
-
-  //? erase previous second hand
-  x3 = (CENTER_X + (sin(oldSrad) * SEC_HAND));
-  y3 = (CENTER_Y - (cos(oldSrad) * SEC_HAND));
-  tft.drawLine(CENTER_X, CENTER_Y, x3, y3, C_CLOCK_DIAL_BG);
-  tft.fillCircle(x3, y3, SEC_DOT_R, C_CLOCK_DIAL_BG);
-  oldSrad = rad; // save current radians for erase next time
-
-  //? draw new second hand
-  x3 = (CENTER_X + (sin(rad) * SEC_HAND));
-  y3 = (CENTER_Y - (cos(rad) * SEC_HAND));
-  tft.drawLine(CENTER_X, CENTER_Y, x3, y3, C_CLOCK_SEC_HAND);
-  tft.fillCircle(x3, y3, SEC_DOT_R, C_CLOCK_SEC_HAND);
-
-  //? **** Process minute hand ****
-  deg = minute() * 6;         // each minute advances 6 degrees
-  rad1 = DEGtoRAD(deg + 90);  // base of triangular hand
-  rad2 = DEGtoRAD(deg - 90);  // base of triangular hand
-  rad3 = DEGtoRAD(deg);       // point of hand
-  static float oldMdeg = deg; // save current degrees for triangle
-
-  //? erase previous minute hand
-  if (deg != oldMdeg || firstRender)
-  {
-    float oldMrad1 = DEGtoRAD(oldMdeg + 90);
-    float oldMrad2 = DEGtoRAD(oldMdeg - 90);
-    float oldMrad3 = DEGtoRAD(oldMdeg);
-    x1 = (CENTER_X + (sin(oldMrad1) * HUB_R));
-    y1 = (CENTER_Y - (cos(oldMrad1) * HUB_R));
-    x2 = (CENTER_X + (sin(oldMrad2) * HUB_R));
-    y2 = (CENTER_Y - (cos(oldMrad2) * HUB_R));
-    x3 = (CENTER_X + (sin(oldMrad3) * MIN_HAND));
-    y3 = (CENTER_Y - (cos(oldMrad3) * MIN_HAND));
-    tft.fillTriangle(x1, y1, x2, y2, x3, y3, C_CLOCK_DIAL_BG);
-    oldMdeg = deg;
-  }
-
-  //? draw new minute hand
-  x1 = (CENTER_X + (sin(rad1) * HUB_R));
-  y1 = (CENTER_Y - (cos(rad1) * HUB_R));
-  x2 = (CENTER_X + (sin(rad2) * HUB_R));
-  y2 = (CENTER_Y - (cos(rad2) * HUB_R));
-  x3 = (CENTER_X + (sin(rad3) * MIN_HAND));
-  y3 = (CENTER_Y - (cos(rad3) * MIN_HAND));
-  tft.fillTriangle(x1, y1, x2, y2, x3, y3, C_CLOCK_MIN_HAND);
-
-  //? **** Process hour hand ****
-  int dialHour = hour();
-  // convert to 12-hour time
-  if (dialHour > 13)
-  {
-    dialHour = dialHour - 12;
-  }
-  // 30 degree increments + adjust for minutes
-  // the Swiss prefer incrementing the minute hand in minute steps
-  deg = dialHour * 30 + int((minute() / 12) * 6);
-  static float oldHdeg = deg;
-  rad1 = DEGtoRAD(deg + 90);
-  rad2 = DEGtoRAD(deg - 90);
-  rad3 = DEGtoRAD(deg);
-
-  //? erase previous hour hand
-  if (deg != oldHdeg || firstRender)
-  {
-    float oldHrad1 = DEGtoRAD(oldHdeg + 90);
-    float oldHrad2 = DEGtoRAD(oldHdeg - 90);
-    float oldHrad3 = DEGtoRAD(oldHdeg);
-    x1 = (CENTER_X + (sin(oldHrad1) * HUB_R));
-    y1 = (CENTER_Y - (cos(oldHrad1) * HUB_R));
-    x2 = (CENTER_X + (sin(oldHrad2) * HUB_R));
-    y2 = (CENTER_Y - (cos(oldHrad2) * HUB_R));
-    x3 = (CENTER_X + (sin(oldHrad3) * HOUR_HAND));
-    y3 = (CENTER_Y - (cos(oldHrad3) * HOUR_HAND));
-    tft.fillTriangle(x1, y1, x2, y2, x3, y3, C_CLOCK_DIAL_BG);
-    oldHdeg = deg; // save current degrees for triangle
-  }
-  //? draw new hour hand
-  x1 = (CENTER_X + (sin(rad1) * HUB_R));
-  y1 = (CENTER_Y - (cos(rad1) * HUB_R));
-  x2 = (CENTER_X + (sin(rad2) * HUB_R));
-  y2 = (CENTER_Y - (cos(rad2) * HUB_R));
-  x3 = (CENTER_X + (sin(rad3) * HOUR_HAND));
-  y3 = (CENTER_Y - (cos(rad3) * HOUR_HAND));
-  tft.fillTriangle(x1, y1, x2, y2, x3, y3, C_CLOCK_HOUR_HAND);
-
-  // print indoor temperature & humidity
-  float temp = dht.readTemperature(!metricUnits);
-  float rel_hum = dht.readHumidity();
-  tft.setTextColor(RED, C_CLOCK_DIAL_BG); // print over dial
-  if (metricUnits)
-  {
-    displayCenter(String(temp, 1) + "C", CENTER_X, CENTER_Y - 30, 2);
-  }
-  else
-  {
-    displayCenter(String(temp, 0) + "F", CENTER_X, CENTER_Y - 30, 2);
-  }
-  displayCenter(String(rel_hum, 0) + "%", CENTER_X, CENTER_Y + 15, 2);
-
-  //? draw hub with little dot in center of hub
-  tft.fillCircle(CENTER_X, CENTER_Y, HUB_R, C_CLOCK_HUB);
-  tft.fillCircle(CENTER_X, CENTER_Y, 1, C_CLOCK_DIAL_BG);
-
-} // analogClockFrame()
-
-/*
-******************************************************
 ************* DIGITAL CLOCK FRAME ********************
 ******************************************************
 */
@@ -1290,14 +1097,21 @@ void digitalClockFrame()
   displayCenter("Indoor", SCREEN_W2, topLine + 80, 2);
   float temp = dht.readTemperature(!metricUnits);
   float rel_hum = dht.readHumidity();
-  tft.setTextColor(C_DIGITAL_INDOOR, C_DIGITAL_BG); // print over dial
-  if (metricUnits)
+  if (isnan(temp) || isnan(rel_hum))
   {
-    displayCenter(String(temp, 1) + "C/" + String(rel_hum, 0) + "%", SCREEN_W2, topLine + 96, 2);
+    DEBUG_PRINTLN(F("DHT sensor fail"));
   }
   else
   {
-    displayCenter(String(temp, 0) + "F/" + String(rel_hum, 0) + "%", SCREEN_W2, topLine + 96, 2);
+    tft.setTextColor(C_DIGITAL_INDOOR, C_DIGITAL_BG); // print over dial
+    if (metricUnits)
+    {
+      displayCenter(String(temp, 1) + "C/" + String(rel_hum, 0) + "%", SCREEN_W2, topLine + 96, 2);
+    }
+    else
+    {
+      displayCenter(String(temp, 0) + "F/" + String(rel_hum, 0) + "%", SCREEN_W2, topLine + 96, 2);
+    }
   }
 } // digitalClockFrame()
 
