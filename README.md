@@ -74,7 +74,7 @@ This procedure will temporarily turn the weather display into a Wi-Fi access poi
 3.	Open your phone’s Wi-Fi connection settings. After a brief delay *D1Sdisplay* will appear in the list of available networks. Select it and wait for your phone to connect. You may safely ignore any warning that no Internet is available.
 4.	Open your phone’s browser. Enter 192.168.4.1 into the address bar. A web page will appear.
 5.	Enter the following information:  
-    * Your Wi-Fi SSID
+    * Your Wi-Fi SSID (you may select this from the available networks shown at teh top of the page)
     *	Your Wi-Fi password
     * Your latitude in decimal degrees. Positive for north latitudes, negative for south latitudes.
     *	Your longitude in decimal degrees. Positive for east longitudes, negative for west longitudes.
