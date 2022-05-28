@@ -52,14 +52,14 @@ The USB connector will line up with the hole on the side of the case. (Figure 6)
 14. Apply the nameplate on the rear of the case. Apply the decorative keyboard label under the display. (Optional)
 15. The assembly is complete.
 
-|  __  |  __  |  __  |
+| Click to enlarge  | Click to enlarge | Click to enlarge |
 |:----:|:----:|:----:|
 |<img src="/images/Figure 1 - Parts.jpg" width="40%"/> | <img src="/images/Figure 2 - headers.jpg" width="70%"/> | <img src="/images/Figure 3 - D1 placed.png" width="70%"/>|      
-|Figure 1 - Step 1 | Figure 2 - Step 2 | Figure 3 - Step 3|
-|<img src="/images/Figure 4 - glue.png" width="40%"/> | <img src="/images/Figure 5 - cut leads.png" width="70%"/> |  <img src="/images/Figure 6 - replace D1 Mini.png" width="70%"/>|
-|Figure 4 - Step 6 | Figure 5 - Step 8 | Figure 6 - Step 9|
+|Figure 1 (Step 1) <br />Parts Layout| Figure 2 (Step 2) <br />Place long-tailed sockets on display | Figure 3 (Step 3) <br/>Set D1 Mini on socket pins |
+|<img src="/images/Figure 4 - glue.png" width="40%"/> | <img src="/images/Figure 5 - cut leads.png" width="70%"/> | <img src="/images/Figure 6 - replace D1 Mini.png" width="70%"/> |
+|Figure 4 (Step 6)<br/>Place display in case observing orientation | Figure 5 (Step 8)<br/>Cut selected leads | Figure 6 (Step 9)<br/>Place D1 Mini on display in correct orientation|
 |<img src="/images/Figure 7 - DHT11.png" width="40%"/> | <img src="/images/Figure 8 - Final connections.png" width="60%"/> |  <img src="/images/Figure 9 - Case.png" width="60%"/>|
-|Figure 7 - Step 11 | Figure 8 - Step 12 | Figure 9 - Step 13|
+|Figure 7 (Step 11)<br/>Prepare DHT11 sensor | Figure 8 (Step 12)<br/>Connect sensor and Micro USB | Figure 9 (Step 13)<br/>Glue sensor and apply decals|
 
 ### Configuration
 These instructions are for a cell phone with Wi-Fi capability. The same method could be used with a Wi Fi connected computer. 
