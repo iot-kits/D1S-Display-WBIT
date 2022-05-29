@@ -207,7 +207,7 @@ bool shouldSaveConfig = false;
 char wm_wx_api[API_SIZE] = "";            // get free account at https://www.weatherbit.io/
 char wm_wx_lat[GEO_SIZE] = "38.88941";    // Washington Monument
 char wm_wx_lon[GEO_SIZE] = "-77.0351413"; //
-char wm_wx_dlc[2] = "";                   // omit digital clock
+char wm_wx_dlc[2] = "D";                  // digital clock
 char wm_wx_met[2] = "I";                  // Imperial units
 char wm_wx_dur[3] = "5";                  // show screens for 5 seconds
 
@@ -276,7 +276,7 @@ void setup()
 
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, HIGH); // turn off LED
-  DEBUG_PRINTLN("\nIoT Kits splash");
+  Serial.println("\nIoT Kits splash");
   splashScreen(); // stays on until logon is complete
   delay(2000);
   WiFi.mode(WIFI_STA); // explicitly set mode, esp defaults to STA+AP
