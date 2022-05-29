@@ -47,7 +47,14 @@ Remote display for users without an IoT Kits weather station. Preprogrammed!
   __DOUBLE CHECK THAT ALL PINS ARE CORRECTLY MATED WITH RST TO RST AND 5V to 5V, ETC.__  
 The USB connector will line up with the hole on the side of the case. (Figure 6) 
 11. Place the leads of the jumper cable onto the DHT11 sensor pins. Note the wire color for each of the pins: +, OUT, and -. The wire colors are different in each kit. As an optional step, you may place a small blob of hot melt glue over the plastic part of the connectors to maintain their orientation if ever removed. (Figure 7)
-12. Feed the jumper cable through the oval slot in the rear case. Connect the + wire to 3V3, connect the – wire to G, connect the OUT wire to D6.  Plug a Micro USB cable onto the D1 Mini USB connector through the opening in the side of the case. (Figure 8)
+12. Plug a Micro USB cable onto the D1 Mini USB connector through the opening in the side of the case. Feed the jumper cable through the oval slot in the rear case. Connect the jumper wires as follows:   (Figure 8)
+
+| DHT11  | D1 Mini |
+|:------:|:-------:|
+| +      | 3V3     |
+| OUT    | D6      |
+| -      | G       |
+
 13. Snap the rear cover onto the case. Place a dab of hot melt glue on the underside of the DHT11 sensor and place it on the upper right of the case cover. (Figure 9).
 14. Apply the nameplate on the rear of the case. Apply the decorative keyboard label under the display. (Optional)
 15. The assembly is complete.
