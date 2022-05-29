@@ -45,9 +45,9 @@ Remote display for users without an IoT Kits weather station. Preprogrammed!
 9.	Replace the D1 Mini onto the back of the display unit. Observe the orientation so that pin RST of the D1 Mini engages with RST on the display board. All the pins must match.  
   __THE CORRECT ORIENTATION IS CRUCIAL!__  
   __DOUBLE CHECK THAT ALL PINS ARE CORRECTLY MATED WITH RST TO RST AND 5V to 5V, ETC.__  
-The USB connector will line up with the hole on the side of the case. (Figure 6) 
-11. Place the leads of the jumper cable onto the DHT11 sensor pins. Note the wire color for each of the pins: +, OUT, and -. The wire colors are different in each kit. As an optional step, you may place a small blob of hot melt glue over the plastic part of the connectors to maintain their orientation if ever removed. (Figure 7)
-12. Plug a Micro USB cable onto the D1 Mini USB connector through the opening in the side of the case. Feed the jumper cable through the oval slot in the rear case. Connect the jumper wires as follows:   (Figure 8)
+    * The USB connector will line up with the hole on the side of the case. (Figure 6) 
+10. Place the leads of the jumper cable onto the DHT11 sensor pins. Note the wire color for each of the pins: +, OUT, and -. The wire colors are different in each kit. As an optional step, you may place a small blob of hot melt glue over the plastic part of the connectors to maintain their orientation if ever removed. (Figure 7)  
+11. Plug a Micro USB cable onto the D1 Mini USB connector through the opening in the side of the case. Feed the jumper cable through the oval slot in the rear case. Connect the jumper wires as follows:   (Figure 8)
 
 | DHT11  | D1 Mini |
 |:------:|:-------:|
@@ -55,9 +55,9 @@ The USB connector will line up with the hole on the side of the case. (Figure 6)
 | OUT    | D6      |
 | -      | G       |
 
-13. Snap the rear cover onto the case. Place a dab of hot melt glue on the underside of the DHT11 sensor and place it on the upper right of the case cover. (Figure 9).
-14. Apply the nameplate on the rear of the case. Apply the decorative keyboard label under the display. (Optional)
-15. The assembly is complete.
+12. Snap the rear cover onto the case. Place a dab of hot melt glue on the underside of the DHT11 sensor and place it on the upper right of the case cover. (Figure 9).
+13. Apply the nameplate on the rear of the case. Apply the decorative keyboard label under the display. (Optional)
+14. The assembly is complete.
 
 | Click to enlarge  | Click to enlarge | Click to enlarge |
 |:----:|:----:|:----:|
@@ -66,7 +66,7 @@ The USB connector will line up with the hole on the side of the case. (Figure 6)
 |<img src="/images/Figure 4 - glue.png" width="40%"/> | <img src="/images/Figure 5 - cut leads.png" width="70%"/> | <img src="/images/Figure 6 - replace D1 Mini.png" width="70%"/> |
 |Figure 4 (Step 6)<br/>Place display in case observing orientation | Figure 5 (Step 8)<br/>Cut selected leads | Figure 6 (Step 9)<br/>Place D1 Mini on display in correct orientation|
 |<img src="/images/Figure 7 - DHT11.png" width="40%"/> | <img src="/images/Figure 8 - Final connections.png" width="60%"/> |  <img src="/images/Figure 9 - Case.png" width="60%"/>|
-|Figure 7 (Step 11)<br/>Prepare DHT11 sensor | Figure 8 (Step 12)<br/>Connect sensor and Micro USB | Figure 9 (Step 13)<br/>Glue sensor and apply decals|
+|Figure 7 (Step 10)<br/>Prepare DHT11 sensor | Figure 8 (Step 11)<br/>Connect sensor and Micro USB | Figure 9 (Step 12)<br/>Glue sensor and apply decals|
 
 ### Configuration
 These instructions are for a cell phone with Wi-Fi capability. The same method could be used with a Wi Fi connected computer. 
