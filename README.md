@@ -68,7 +68,7 @@ Remote display for users without an IoT Kits weather station. Preprogrammed!
 |<img src="/images/Figure 7 - DHT11.png" width="40%"/> | <img src="/images/Figure 8 - Final connections.png" width="60%"/> |  <img src="/images/Figure 9 - Case.png" width="60%"/>|
 |Figure 7 (Step 10)<br/>Prepare DHT11 sensor | Figure 8 (Step 11)<br/>Connect sensor and Micro USB | Figure 9 (Step 12)<br/>Glue sensor and apply decals|
 
-### Configuration
+### Software Configuration
 These instructions are for a cell phone with Wi-Fi capability. The same method could be used with a Wi Fi connected computer. 
 You must be familiar with how to open the Wi-Fi connection settings on your phone, how to open your phone’s web browser, and how to enter an URL into the browser’s address bar.
 This procedure will temporarily turn the weather display into a Wi-Fi access point. You will connect your cell phone to the display unit’s Wi-Fi signal. Then use your cell phone’s Internet browser to open a web page hosted by the weather display. After you enter the configuration information into the web page, the weather display will connect to your Wi-Fi network and begin normal operation.  
@@ -91,7 +91,11 @@ This procedure will temporarily turn the weather display into a Wi-Fi access poi
 6.	The weather display will save the configuration data, connect to your WI-Fi and begin downloading time and weather information.  This may take a minute or so.
 7.	If you ever need to change any parameter, press the reset button on the D1 Mini twice in succession. You may have to do this a few times. The unit goes into configuration mode when the blue LED on the D1 Mini turns on and the configuration reminder screen appears.
 
-| Click to enlarge  | Click to enlarge | Click to enlarge |Click to enlarge |
-|:----:|:----:|:----:|:----:|
-|<img src="/images/Portal.jpg" width="20%"/>|<img src="/images/Portal.jpg" width="20%"/>|<img src="/images/Portal.jpg" width="20%"/>|<img src="/images/Portal.jpg" width="20%"/>|
 <img src="/images/Portal.jpg" width="20%"/>
+
+## Other Display Screens
+
+|:----:|:----:|:----:|:----:|
+|<img src="/images/Splash Screen.jpg" width="20%"/>|<img src="/images/Config Screen.jpg" width="20%"/>|<img src="/images/Update Screen.jpg" width="20%"/>|<img src="/images/Portal.jpg" width="20%"/>|
+|Splash Screen|Configuration Screen|Firmware Update Screen|Configuration Portal
+
