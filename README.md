@@ -96,7 +96,7 @@ This procedure will temporarily turn the weather display into a Wi-Fi access poi
 ## Other Display Screens
 | | | | |
 |:----:|:----:|:----:|:----:|
-|<img src="/images/Splash Screen.jpg"/>|<img src="/images/Config Screen.jpg"/>|<img src="/images/Update Screen.jpg" />| |
+|<img src="/images/Splash Screen.jpg"/>|<img src="/images/Config Screen.jpg"/>|<img src="/images/Update Screen.jpg" />|<img src="/images/Data Screen.jpg">|
 |Splash Screen|Configuration Screen|Firmware Update Screen| Data Screen |
-|<img src="/images/First Weather Screen.jpg"/>|<img src="/images/Second Weather Screen.jpg"/>|<img src="/images/Almanac Screen.jpg">|<img src="/images/Time-Temp Screen.jpg">|<img src="/images/Data Screen.jpg">|
+|<img src="/images/First Weather Screen.jpg"/>|<img src="/images/Second Weather Screen.jpg"/>|<img src="/images/Almanac Screen.jpg">|<img src="/images/Time-Temp Screen.jpg">|
 |First Weather Screen|Second Weather Screen|Almanac Screen| Time & Temperature Screen |
