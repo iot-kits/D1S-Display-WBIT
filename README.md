@@ -94,7 +94,7 @@ This procedure will temporarily turn the weather display into a Wi-Fi access poi
 <img src="/images/Portal.jpg" width="20%"/>
 
 ## Other Display Screens
-
+| | | | |
 |:----:|:----:|:----:|:----:|
 |<img src="/images/Splash Screen.jpg" width="20%"/>|<img src="/images/Config Screen.jpg" width="20%"/>|<img src="/images/Update Screen.jpg" width="20%"/>|<img src="/images/Portal.jpg" width="20%"/>|
 |Splash Screen|Configuration Screen|Firmware Update Screen|Configuration Portal
