@@ -31,24 +31,34 @@ Remote display for users without an IoT Kits weather station. Preprogrammed!
     *	Micro USB cable. Dollar store varieties are acceptable.
  
 ### Assemble the kit.
-1.	Lay out the parts on a safe working surface. (Figure 1)
-2.	Place the two long-tailed sockets on the display unit pins. You will not need the short tail sockets or header pins. (Figure 2) 
-3.	Carefully set the D1 Mini onto the pins with the silver case toward the back of the display unit. With the D1 Mini in the correct orientation, you will be soldering on the side with the USB connector. (Figure 3)
-4.	Solder each header pin onto the D1 Mini. Carefully inspect your solder joints. You are done soldering.
-5.	Remove the D1 Mini from the display unit and set aside.
-6.	Remove the protective film from the display screen. Place the display into the case with the row of pins RST, A0, D0… toward the top. Engage the holes in the display board with the molded bosses of the case. (Figure 4) 
-7.	While pressing the display into the case to keep it flush, place a dab of hot melt glue on each boss. Hot melt is a good choice because it is removable. You can use other glues at your risk. 
-8.	Cut off selected leads from the D1 Mini with diagonal cutters. (Figure 5)    
+1. Have an activated WeatherBit account and API key as described above.
+2. Lay out the parts on a safe working surface.
+<img src="/images/Figure 1 - Parts.jpg" width="10%"/>
+
+**The next few instructons use the preinstalled pins of the display unit as a fixture to align the D1 Mini assembly. Carefully follows these instructions. You will install and remove connectors several times.**
+
+3. Place the two long-tailed sockets on the display unit pins. You will not need the short tail sockets or header pins if the are provided in the kit.
+<img src="/images/Figure 2 - headers.jpg" width="10%"/>  
+4.	Carefully set the D1 Mini onto the pins with the silver case toward the back of the display unit. With the D1 Mini in the correct orientation, you will be soldering on the side with the USB connector.
+<img src="/images/Figure 6 - replace D1 Mini.png" width="10%"/> 
+5.	Solder each header pin onto the D1 Mini. Carefully inspect your solder joints. Congratulations! You are done soldering.
+6.	Remove the D1 Mini from the display unit and set aside.
+7.	Remove the protective film from the display screen. Place the display into the case with the row of pins RST, A0, D0… toward the top. Engage the holes in the display board with the molded bosses of the case.
+<img src="/images/Figure 4 - glue.png" width="10%"/> 
+8.	While pressing the display into the case to keep it flush, place a dab of hot melt glue on each boss. Hot melt is a good choice because it is removable. You can use other glues at your risk. 
+9.	Cut off selected leads from the D1 Mini with diagonal cutters.   
    __MAKE SURE YOU UNDERSTAND THIS STEP BEFORE YOU CUT!__  
     *	Cut these pins: RST, D0, D5, D7, D8, TX, RX, D3, D4, 5V, A0.  
     *	**DO NOT CUT THESE PINS:** D6, 3V3, D1, D2, G.
     * NOTE: D1 and D2 are not used in this kit. They are reserved for I2C-connected sensors in future designs.
-9.	Replace the D1 Mini onto the back of the display unit. Observe the orientation so that pin RST of the D1 Mini engages with RST on the display board. All the pins must match.  
+<img src="/images/Figure 5 - cut leads.png" width="10%"/>
+10.	Replace the D1 Mini onto the back of the display unit. Observe the orientation so that pin RST of the D1 Mini engages with RST on the display board. All the pins must match.  
   __THE CORRECT ORIENTATION IS CRUCIAL!__  
   __DOUBLE CHECK THAT ALL PINS ARE CORRECTLY MATED WITH RST TO RST AND 5V to 5V, ETC.__  
-    * The USB connector will line up with the hole on the side of the case. (Figure 6) 
-10. Place the leads of the jumper cable onto the DHT11 sensor pins. Note the wire color for each of the pins: +, OUT, and -. The wire colors are different in each kit. As an optional step, you may place a small blob of hot melt glue over the plastic part of the connectors to maintain their orientation if ever removed. (Figure 7)  
-11. Plug a Micro USB cable onto the D1 Mini USB connector through the opening in the side of the case. Feed the jumper cable through the oval slot in the rear case. Connect the jumper wires to the D1 Mini as shown in the table. If the connector is loose, try rotating it 90 degrees on the pin.   (Figure 8)
+    * The USB connector will line up with the hole on the side of the case.
+11. Place the leads of the jumper cable onto the DHT11 sensor pins. Note the wire color for each of the pins: +, OUT, and -. The wire colors are different in each kit. As an optional step, you may place a small blob of hot melt glue over the plastic part of the connectors to maintain their orientation if ever removed.
+<img src="/images/Figure 7 - DHT11.png" width="10%"/>  
+12. Plug a Micro USB cable onto the D1 Mini USB connector through the opening in the side of the case. Feed the jumper cable through the oval slot in the rear case. Connect the jumper wires to the D1 Mini as shown in the table. If the connector is loose, try rotating it 90 degrees on the pin.
 
 |DHT11 |D1 Mini|
 |:----:|:-----:|
@@ -56,18 +66,11 @@ Remote display for users without an IoT Kits weather station. Preprogrammed!
 | OUT  | D6    |
 | -    | G     |
 
-12. Snap the rear cover onto the case. Place a dab of hot melt glue on the underside of the DHT11 sensor and place it on the upper right of the case cover. (Figure 9).
-13. Apply the nameplate on the rear of the case. Apply the decorative keyboard label under the display. (Optional)
-14. The assembly is complete.
-
-| Click to enlarge  | Click to enlarge | Click to enlarge |
-|:----:|:----:|:----:|
-|<img src="/images/Figure 1 - Parts.jpg" width="40%"/> | <img src="/images/Figure 2 - headers.jpg" width="70%"/> | <img src="/images/Figure 3 - D1 placed.png" width="70%"/>|      
-|Figure 1 (Step 1) <br />Parts Layout| Figure 2 (Step 2) <br />Place long-tailed sockets on display | Figure 3 (Step 3) <br/>Set D1 Mini on socket pins |
-|<img src="/images/Figure 4 - glue.png" width="40%"/> | <img src="/images/Figure 5 - cut leads.png" width="70%"/> | <img src="/images/Figure 6 - replace D1 Mini.png" width="70%"/> |
-|Figure 4 (Step 6)<br/>Place display in case observing orientation | Figure 5 (Step 8)<br/>Cut selected leads | Figure 6 (Step 9)<br/>Place D1 Mini on display in correct orientation|
-|<img src="/images/Figure 7 - DHT11.png" width="40%"/> | <img src="/images/Figure 8 - Final connections.png" width="60%"/> |  <img src="/images/Figure 9 - Case.png" width="60%"/>|
-|Figure 7 (Step 10)<br/>Prepare DHT11 sensor | Figure 8 (Step 11)<br/>Connect sensor and Micro USB | Figure 9 (Step 12)<br/>Glue sensor and apply decals|
+<img src="/images/Figure 8 - Final connections.png" width="10%"/> 
+13. Snap the rear cover onto the case. Place a dab of hot melt glue on the underside of the DHT11 sensor and place it on the upper right of the case cover.
+<img src="/images/Figure 9 - Case.png" width="10%"/>
+14. Apply the nameplate on the rear of the case. The step is optional: Apply the decorative keyboard label under the display.
+15. The assembly is complete.
 
 ### Software Configuration
 These instructions are for a cell phone with Wi-Fi capability. The same method could be used with a Wi Fi connected computer. 
