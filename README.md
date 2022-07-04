@@ -36,7 +36,7 @@ These instructions are for the Remote Display kit for users without an IoT Kits 
 2. Lay out the parts on a safe working surface.
 <img src="/images/Figure 1 - Parts.jpg" width="10%"/>
 
-**The next few instructons use the preinstalled pins of the display unit as a fixture to align the D1 Mini assembly. Carefully follows these instructions. You will install and remove connectors several times.**
+**The next few instructons use the preinstalled pins of the display unit as a fixture to align the D1 Mini assembly. Carefully follow these instructions. You will install and remove connectors several times.**
 
 3. Place the two long-tailed sockets on the display unit pins. You will not need the short tail sockets or header pins if the are provided in the kit.
 <img src="/images/Figure 2 - headers.jpg" width="10%"/>
