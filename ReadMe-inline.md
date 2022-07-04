@@ -1,5 +1,5 @@
 # D1S-Display-WBIT
-Remote display for users without an IoT Kits weather station. Preprogrammed!
+These instructions are for the Remote Display kit for users without an IoT Kits weather station. The microcontroller is preprogrammed!
 
 ## Assembly and Configuration Instructions
 ### Features:
