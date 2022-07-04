@@ -84,12 +84,13 @@ These instructions are for a cell phone with Wi-Fi capability. The same method c
 You must be familiar with how to open the Wi-Fi connection settings on your phone, how to open your phone’s web browser, and how to enter an URL into the browser’s address bar.
 This procedure will temporarily turn the weather display into a Wi-Fi access point. You will connect your cell phone to the display unit’s Wi-Fi signal. Then use your cell phone’s Internet browser to open a web page hosted by the weather display. After you enter the configuration information into the web page, the weather display will connect to your Wi-Fi network and begin normal operation.  
 **Do not connect the display to a power supply until instructed to do so.**
+You will need ALL the accounts and information noted in the section "What you will need" above. Do not proceed unless you have ALL this information. 
 1.	Have all the configuration information at hand ready to enter:  
     *	Your Wi-Fi name (SSID) and password
     *	Your WeatherBit API key
     *	Your latitude and longitude in decimal degrees
 2.	Plug the USB cable into a standard 5-volt adapter or power supply. The display will show a splash screen then brief instructions for configuring the unit will appear.
-3.	Open your phone’s Wi-Fi connection settings. After a brief delay *D1Sdisplay* will appear in the list of available networks. Select it and wait for your phone to connect. You may safely ignore any warning that no Internet is available.
+3.	Open your phone’s Wi-Fi connection settings. Turn off auoto reconnect on your current Wi-Fi connection. After a brief delay *D1Sdisplay* will appear in the list of available networks. Select it and wait for your phone to connect. You may safely ignore any warning that no Internet is available.
 4.	Open your phone’s browser. Enter **192.168.4.1** into the address bar. A web page will appear.
 5.	Enter the following information:  
     * Your Wi-Fi SSID (you may select this from the available networks shown at the top of the page)
@@ -100,7 +101,8 @@ This procedure will temporarily turn the weather display into a Wi-Fi access poi
     *	~~Check the Show clock box if you wish to have the unit display local and UTC times.~~
     *	Select the duration of each display screen.
 6.	The weather display will save the configuration data, connect to your WI-Fi and begin downloading time and weather information.  This may take a minute or so.
-7.	If you ever need to change any parameter, press the reset button on the D1 Mini twice in succession. You may have to do this a few times. The unit goes into configuration mode when the blue LED on the D1 Mini turns on and the configuration reminder screen appears.
+7.	Go back to your phone settings and turn on auto reconnect for your regular Wi-Fi connection.
+8.	If you ever need to change any parameter, press the reset button on the D1 Mini twice in succession. You may have to do this a few times. The unit goes into configuration mode when the blue LED on the D1 Mini turns on and the configuration reminder screen appears.
 
 <img src="/images/Portal.jpg" width="20%"/>
 
