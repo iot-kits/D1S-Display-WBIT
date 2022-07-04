@@ -66,11 +66,11 @@ These instructions are for the Remote Display kit for users without an IoT Kits 
 
 12. Plug a Micro USB cable onto the D1 Mini USB connector through the opening in the side of the case. Feed the jumper cable through the oval slot in the rear case. Connect the jumper wires to the D1 Mini as shown in the table. If the connector is loose, try rotating it 90 degrees on the pin.
 
-|DHT11 |D1 Mini|
-|:----:|:-----:|
-| +    | 3V3   |
-| OUT  | D6    |
-| -    | G     |
+|DHT11 |D1 Mini|Your Wire Color|
+|:----:|:-----:|:-----:|
+| +    | 3V3   |       |
+| OUT  | D6    |       |
+| -    | G     |       |
 
 <img src="/images/Figure 8 - Final connections.png" width="10%"/> 
 
