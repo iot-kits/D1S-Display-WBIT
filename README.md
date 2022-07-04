@@ -78,7 +78,7 @@ These instructions are for the Remote Display kit for users without an IoT Kits 
 <img src="/images/Figure 9 - Case.png" width="10%"/>
 
 14. Apply the nameplate on the rear of the case. The step is optional: Apply the decorative keyboard label under the display.
-15. The assembly is complete.
+15. The assembly is complete. The next step is to configure the soaftware.
 
 ### Software Configuration
 These instructions are for a cell phone with Wi-Fi capability. The same method could be used with a Wi Fi connected computer. 
