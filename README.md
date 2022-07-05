@@ -53,9 +53,9 @@ These instructions are for the Remote Display kit for users without an IoT Kits 
 
 9.	Cut off selected leads from the D1 Mini with diagonal cutters.   
    __MAKE SURE YOU UNDERSTAND THIS STEP BEFORE YOU CUT!__  
-    *	Cut these pins: RST, D0, D5, D7, D8, TX, RX, D3, D4, 5V, A0.  
-    *	**DO NOT CUT THESE PINS:** D6, 3V3, D1, D2, G.
-    * NOTE: D1 and D2 are not used in this kit. They are reserved for I2C-connected sensors in future designs.
+    *	Cut these pins: RST, D0, D5, D7, D8, TX, RX, D3, D4, 5V.  
+    *	**DO NOT CUT THESE PINS:** D6, 3V3, G, D1, D2, A0.
+    * NOTE: D1, D2, and A0 are not used in this kit. D1 and D2 are for I2C sensors, A0 is for analog input. All are reserved for future use.
 <img src="/images/Figure 5 - cut leads.png" width="25%"/>
 
 10.	Replace the D1 Mini onto the back of the display unit. Observe the orientation so that pin RST of the D1 Mini engages with RST on the display board. All the pins must match.  
