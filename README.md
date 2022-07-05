@@ -62,7 +62,7 @@ These instructions are for the Remote Display kit for users without an IoT Kits 
   __THE CORRECT ORIENTATION IS CRUCIAL!__  
   __DOUBLE CHECK THAT ALL PINS ARE CORRECTLY MATED WITH RST TO RST AND 5V to 5V, ETC.__  
     * The USB connector will line up with the hole on the side of the case.
-11. Place the leads of the jumper cable onto the DHT11 sensor pins. Note the wire color for each of the pins: +, OUT, and -. The wire colors are different in each kit. As an optional step, you may place a small blob of hot melt glue over the plastic part of the connectors to maintain their orientation if ever removed.
+11. Place the leads of the jumper cable onto the DHT11 sensor pins. The the table in step 12 to record the wire color for each of the pins: +, OUT, and -. The wire colors are different in each kit. As an optional step, you may place a small blob of hot melt glue over the plastic part of the connectors to maintain their orientation if ever removed.
 <img src="/images/Figure 7 - DHT11.png" width="25%"/>  
 
 12. Plug a Micro USB cable onto the D1 Mini USB connector through the opening in the side of the case. Feed the jumper cable through the oval slot in the rear case. Connect the jumper wires to the D1 Mini as shown in the table. If the connector is loose, try rotating it 90 degrees on the pin.
