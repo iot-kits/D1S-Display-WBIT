@@ -26,8 +26,8 @@ Weather information is provided by [weatherbit.io](https://www.weatherbit.io/). 
 ## List of Weather Conditions
 
 |Screen Display |Condition | WeatherBit code |
-|:---:|:---:|----| 200 - 233 |
-|Thundrstrm |Thunderstorm |
+|:---:|:---:|----|
+|Thundrstrm |Thunderstorm | 200 - 233 |
 |Lte Drzzle |Light Drizzle |300|
 |Drizzle |Drizzle | 301, 310 - 321 |
 |Hvy Drzzle |Heavy Drizzle |302|
