@@ -98,7 +98,7 @@ Note that these weather observation codes are very similar to those used by [Ope
 ## Ultraviolet Index
 The UV Index is an indication of how quickly your skin will burn when outdoors.
 |Screen Display|Risk|Color|Protection|
-|:----:|:----:|:----:|:----:|
+|:----:|:----:|:----:|---|
 |0 to 2 Low     |Low        |Green |No protection needed. You can safely stay outside using minimal sun protection.|
 |3 to 5 Mdrte   |Moderate   |Yellow|Protection needed. Seek shade during late morning through mid-afternoon. When outside, generously apply broad-spectrum SPF-15 or higher sunscreen on exposed skin, and wear protective clothing, a wide-brimmed hat, and sunglasses.|
 |6 to 7 High    |High|Orange|Protection against skin and eye damage is needed. Reduce time in the sun between 10 a.m. and 4 p.m. If outdoors, seek shade and wear sun-protective clothing, a wide-brimmed hat, and UV-blocking sunglasses. Generously apply broad spectrum SPF 15+ sunscreen every 1.5 hours, even on cloudy days, and after swimming or sweating. Bright surfaces, such as sand, water, and snow, will increase UV exposure.|
