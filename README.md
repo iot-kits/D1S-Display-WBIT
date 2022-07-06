@@ -105,6 +105,7 @@ You will need ALL the accounts and information noted in the section "What you wi
 6.	The weather display will save the configuration data, connect to your WI-Fi and begin downloading time and weather information.  This may take a minute or so.
 7.	Go back to your phone settings and turn on auto reconnect for your regular Wi-Fi connection.
 8.	If you ever need to change any parameter, press the reset button on the D1 Mini twice in succession. You may have to do this a few times. The unit goes into configuration mode when the blue LED on the D1 Mini turns on and the configuration reminder screen appears.
+9. See [Display Conditions](https://github.com/iot-kits/D1S-Display-WBIT/blob/main/DISPLAY_DESCRIPTIONS.md) for more information.
 
 <img src="/images/Portal.jpg" width="20%"/>
 
