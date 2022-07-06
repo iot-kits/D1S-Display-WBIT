@@ -37,11 +37,11 @@ Weather information is provided by [weatherbit.io](https://www.weatherbit.io/). 
 |Extrm Rain |Extreme Rain | 503, 504 |
 |Frzng Rain |Freezing Rain |511|
 |Rain Shwrs |Rain Showers | 520 - 531 |
-|Sleet |Sleet |611, 613|
 |Light Snow |Light Snow | 600, 620 |
-|Snow Showr|Snow Shower|621|
-|Heavy Snow |Heavy Snow | 600, 602, 622 |
+|Heavy Snow |Heavy Snow | 601, 602, 622 |
 |Rain&Snow |Mixed Rain and Snow |610, 615, 616|
+|Sleet |Sleet |611, 613|
+|Snow Showr|Snow Shower|621|
 |Flurries |Flurries|623|
 |Mist |Mist |700, 701|
 |Smoke |Smoke |711|
