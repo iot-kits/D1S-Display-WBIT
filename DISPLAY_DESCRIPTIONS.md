@@ -14,7 +14,7 @@ D1S-Display-WBIT
 |  * Accumulated amount of rain or snow forecast | |
 |  * Ultraviolet Index maximum forecast – background color changes with level – see list of UV Index | -- |
 |**Weather #2**| |
-| * Feels like highs and lows| |
+| * Feels like high and low temperatures| |
 | * Wind direction and speed| |
 | * Wind gust speed | |
 | * Cloud cover in percent| |
@@ -40,7 +40,7 @@ Weather information is provided by [weatherbit.io](https://www.weatherbit.io/). 
 ## List of Weather Conditions
 Reference: [www.weatherbit.io/api/codes](https://www.weatherbit.io/api/codes)
 
-Note that these weather observation codes are very similar to [Open Weather Map](https://openweathermap.org/weather-conditions)
+Note that these weather observation codes are very similar to those used by [Open Weather Map](https://openweathermap.org/weather-conditions)
 
 |Screen Display |Condition | WeatherBit code |
 |:---:|:---:|----|
@@ -75,3 +75,31 @@ Note that these weather observation codes are very similar to [Open Weather Map]
 |Ukn Precip |Unknown Precipitation |900|
 |Undefined |Undefined |Undefined|
 
+## Moon Phases
+
+|Screen Display|Name|Days|
+|:----:|:----:|:----:|
+|New|New|0 - 1|
+|Wax Crscnt| Waxing Cresecent| 2 - 6|
+|First Qrtr| First Quarter| 7 - 8|
+|Wax Gibous| Waxing Gibbous| 9 - 13|
+|Full| Full|14-16|
+|Wan Gibous| Waning Gibous|17 - 21|
+|Last Qtr| Last Quarter|22 - 23|
+|Wan Crscnt| Waning Crescent|24 - 28|
+|New| New|29|
+* The moon goes through a 29.53-day cycle.
+* Waxing: The lighted portion is growing. 
+* Waning: The lighted portion is shrinking.
+* Crescent: The lighted portion is less than half. 
+* Gibbous: The lighted portion is more than half.
+
+## Ultraviolet Index
+The UV Index is an indication of how quickly your skin will burn when outdoors.
+|Screen Display|Risk|Color|Protection|
+|:----:|:----:|:----:|----|
+|0 to 2 Low|Low|Green|No protection needed. You can safely stay outside using minimal sun protection.|
+|3 to 5 Mdrte|Moderate|Yellow|Protection needed. Seek shade during late morning through mid-afternoon. When outside, generously apply broad-spectrum SPF-15 or higher sunscreen on exposed skin, and wear protective clothing, a wide-brimmed hat, and sunglasses.|
+|6 to 7 High|High|Orange|Protection against skin and eye damage is needed. Reduce time in the sun between 10 a.m. and 4 p.m. If outdoors, seek shade and wear sun-protective clothing, a wide-brimmed hat, and UV-blocking sunglasses. Generously apply broad spectrum SPF 15+ sunscreen every 1.5 hours, even on cloudy days, and after swimming or sweating. Bright surfaces, such as sand, water, and snow, will increase UV exposure.|
+|8 to 10 VryHi|Very High|Red|Extra protection needed. Be careful outside, especially during late morning through mid-afternoon. Seek shade and wear protective clothing, a wide-brimmed hat, and sunglasses, and generously apply a minimum of  SPF-15, broad-spectrum sunscreen on exposed skin.|
+|11 or more Xtrm|Extreme|Purple|Take all precautions because unprotected skin and eyes can burn in minutes. Try to avoid sun exposure between 10 a.m. and 4 p.m. If outdoors, seek shade and wear sun-protective clothing, a wide-brimmed hat, and UV-blocking sunglasses. Generously apply broad spectrum SPF 15+ sunscreen every 1.5 hours, even on cloudy days, and after swimming or sweating. Bright surfaces, such as sand, water, and snow, will increase UV exposure.|
