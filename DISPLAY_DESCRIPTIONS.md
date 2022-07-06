@@ -3,34 +3,26 @@
 ## Descriptions of Displays
 
 |Screen |Photo (Click to enlarge) |
-|--|--|
+| --- | --- |
 |**Splash Screen**|<img src="/images/Splash Screen.jpg" width="25%"/>|
 |**Data Screen**|<img src="/images/Data Screen.jpg" width="25%">|
 |**Weather #1** |<img src="/images/First Weather Screen.jpg" width="25%"/> |
-|  * Brief weather condition forecast – see list of weather conditions | |
-|  * Current temperature | |
-|  * Temperature forecast: Daytime High / Nighttime low  | |
-|  * Probability of precipitation (rain or snow) forecast | |
-|  * Accumulated amount of rain or snow forecast | |
-|  * Ultraviolet Index maximum forecast – background color changes with level – see list of UV Index | |
+| | * Brief weather condition forecast – see list of weather conditions </br> * Current temperature </br> * Temperature forecast: Daytime High / Nighttime low  </br>  * Probability of precipitation (rain or snow) forecast </br> * Accumulated amount of rain or snow forecast </br>  * Ultraviolet Index maximum forecast – background color changes with level – see list of UV Index | 
 |**Weather #2**|<img src="/images/Second Weather Screen.jpg" width="25%"/> |
-| * Feels like high and low temperatures| |
-| * Wind direction and speed| |
-| * Wind gust speed | |
-| * Cloud cover in percent| |
-| * Barometric Pressure at Sea Level | |
-| * Relative Humidity in percent| |
+| | * Feels like high and low temperatures| 
+| | * Wind direction and speed| 
+| | * Wind gust speed | 
+| | * Cloud cover in percent| 
+| | * Barometric Pressure at Sea Level | 
+| | * Relative Humidity in percent| 
 |**Almanac**|<img src="/images/Almanac Screen.jpg" width="25%"/> |
-| * Day and date| |
-| * Sun Rise local time (am)| |
-| * Sun Set local time (pm)| |
-| * Moon Phase |
+| | * Day and date</br> * Sun Rise local time (am)</br> * Sun Set local time (pm) </br> * Moon Phase |
 |**Digital Clock**|<img src="/images/Time-Temp Screen.jpg" width="25%"/> |
-| * Universal Coordinated Time (UTC) | |
-| * Local Time (24-hour)| |
-| * Indoor Temperature & Humidity| |
+| | * Universal Coordinated Time (UTC) | 
+| | * Local Time (24-hour)| 
+| | * Indoor Temperature & Humidity| 
 |**Analog Clock**| |
-| * To Be Implemented | |
+| | * To Be Implemented | 
 |**Configuration**|<img src="/images/Config Screen.jpg" width = "25%"/>|
 |**Firmware Update**|<img src="/images/Update Screen.jpg" width="25%"/>
 
