@@ -24,6 +24,7 @@ The display shows time from the [National Institute of Standards and Technology 
 Weather information is provided by [weatherbit.io](https://www.weatherbit.io/). Conditions are localized with the display's latitude and longitude. During the day, current conditions are updated every 10 minutes. The forecast is updated every hour. Between midnight and 7 am the updates occur every hour for current conditions and every two hours for the forecast.
 
 ## List of Weather Conditions
+Reference: [www.weatherbit.io/api/codes](https://www.weatherbit.io/api/codes)
 
 |Screen Display |Condition | WeatherBit code |
 |:---:|:---:|----|
@@ -54,7 +55,7 @@ Weather information is provided by [weatherbit.io](https://www.weatherbit.io/). 
 |Few Clouds |Few Clouds |801|
 |Sctrd Clds |Scattered Clouds |802|
 |Brkn Clds |Broken Clouds |803|
-|Overcast |Overcast |804|
+|Overcast |Overcast Clouds |804|
 |Ukn Precip |Unknown Precipitation |900|
 |Undefined |Undefined |Undefined|
 
