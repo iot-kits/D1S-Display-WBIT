@@ -9,18 +9,11 @@
 |**Weather #1** |<img src="/images/First Weather Screen.jpg" width="25%"/> |
 | | * Brief weather condition forecast – see list of weather conditions </br> * Current temperature </br> * Temperature forecast: Daytime High / Nighttime low  </br>  * Probability of precipitation (rain or snow) forecast </br> * Accumulated amount of rain or snow forecast </br>  * Ultraviolet Index maximum forecast – background color changes with level – see list of UV Index | 
 |**Weather #2**|<img src="/images/Second Weather Screen.jpg" width="25%"/> |
-| | * Feels like high and low temperatures| 
-| | * Wind direction and speed| 
-| | * Wind gust speed | 
-| | * Cloud cover in percent| 
-| | * Barometric Pressure at Sea Level | 
-| | * Relative Humidity in percent| 
+| | * Feels like high and low temperatures </br> * Wind direction and speed</br> * Wind gust speed </br> * Cloud cover in percent </br> * Barometric Pressure at Sea Level </br> * Relative Humidity in percent| 
 |**Almanac**|<img src="/images/Almanac Screen.jpg" width="25%"/> |
 | | * Day and date</br> * Sun Rise local time (am)</br> * Sun Set local time (pm) </br> * Moon Phase |
 |**Digital Clock**|<img src="/images/Time-Temp Screen.jpg" width="25%"/> |
-| | * Universal Coordinated Time (UTC) | 
-| | * Local Time (24-hour)| 
-| | * Indoor Temperature & Humidity| 
+| | * Universal Coordinated Time (UTC) </br> * Local Time (24-hour) </br> * Indoor Temperature & Humidity| 
 |**Analog Clock**| |
 | | * To Be Implemented | 
 |**Configuration**|<img src="/images/Config Screen.jpg" width = "25%"/>|
