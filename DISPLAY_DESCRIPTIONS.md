@@ -26,6 +26,8 @@ Weather information is provided by [weatherbit.io](https://www.weatherbit.io/). 
 ## List of Weather Conditions
 Reference: [www.weatherbit.io/api/codes](https://www.weatherbit.io/api/codes)
 
+Note that these weather observation codes are very similar to [Open Weather Map](https://openweathermap.org/weather-conditions)
+
 |Screen Display |Condition | WeatherBit code |
 |:---:|:---:|----|
 |Thundrstrm |Thunderstorm | 200 - 233 |
