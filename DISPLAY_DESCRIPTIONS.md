@@ -6,7 +6,7 @@ D1S-Display-WBIT
 
 |Screen |Photo |
 |--|--|
-|**Weather #1** | -- |
+|**Weather #1** |  |
 |  * Brief weather condition forecast – see list of weather conditions | |
 |  * Current temperature | |
 |  * Temperature forecast: Daytime High / Nighttime low  | |
@@ -14,9 +14,23 @@ D1S-Display-WBIT
 |  * Accumulated amount of rain or snow forecast | |
 |  * Ultraviolet Index maximum forecast – background color changes with level – see list of UV Index | -- |
 |**Weather #2**| |
+| * Feels like highs and lows| |
+| * Wind direction and speed| |
+| * Wind gust speed | |
+| * Cloud cover in percent| |
+| * Barometric Pressure at Sea Level | |
+| * Relative Humidity in percent| |
 |**Almanac**| |
+| * Day and date| |
+| * Sun Rise local time (am)| |
+| * Sun Set local time (pm)| |
+| * Moon Phase |
 |**Digital Clock**| |
+| * Universal Coordinated Time (UTC) | |
+| * Local Time (24-hour)| |
+| * Indoor Temperature & Humidity| |
 |**Analog Clock**| -- |
+| * To Be Implemented | |
 
 ## Time and Weather Information
 The display shows time from the [National Institute of Standards and Technology (NIST)](https://en.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology). The time is automatically adjusted for standard and daylight saving for the [Olson time zone](https://en.wikipedia.org/wiki/Tz_database) based on the display's latitude and longitude. 
