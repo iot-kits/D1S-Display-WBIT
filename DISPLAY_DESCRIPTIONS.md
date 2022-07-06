@@ -25,35 +25,36 @@ Weather information is provided by [weatherbit.io](https://www.weatherbit.io/). 
 
 ## List of Weather Conditions
 
-|Screen Display |Condition |
-|:---:|:---:|
+|Screen Display |Condition | WeatherBit code |
+|:---:|:---:|----| 200 - 233 |
 |Thundrstrm |Thunderstorm |
-|Lte Drzzle |Light Drizzle |
-|Drizzle |Drizzle   |
-|Hvy Drzzle |Heavy Drizzle |
-|Light Rain  |Light Rain  |
-|Modrt Rain |Moderate rain |
-|Heavy Rain |Heavy Rain |
-|Extrm Rain |Extreme Rain |
-|Frzng Rain |Freezing Rain |
-|Rain Shwrs |Rain Showers |
-|Sleet |Sleet |
-|Light Snow |Light Snow |
-|Heavy Snow |Heavy Snow |
-|Rain&Snow |Mixed Rain and Snow |
-|Flurries |Flurries   |
-|Mist |Mist |
-|Smoke |Smoke |
-|Haze |Haze |
-|Sand/Dust |Sand/Dust   |
-|Fog |Fog |
-|Frzng Fog |Freezing Fog |
-|Dust |Dust |
-|Clear Sky |Clear Sky |
-|Few Clouds |Few Clouds |
-|Sctrd Clds |Scattered Clouds |
-|Brkn Clds |Broken Clouds |
-|Overcast |Overcast |
-|Ukn Precip |Unknown Precipitation |
-|Undefined |Undefined |
+|Lte Drzzle |Light Drizzle |300|
+|Drizzle |Drizzle | 301, 310 - 321 |
+|Hvy Drzzle |Heavy Drizzle |302|
+|Light Rain  |Light Rain  |500|
+|Modrt Rain |Moderate rain |501|
+|Heavy Rain |Heavy Rain |502|
+|Extrm Rain |Extreme Rain | 503, 504 |
+|Frzng Rain |Freezing Rain |511|
+|Rain Shwrs |Rain Showers | 520 - 531 |
+|Sleet |Sleet |611, 613|
+|Light Snow |Light Snow | 600, 620 |
+|Snow Showr|Snow Shower|621|
+|Heavy Snow |Heavy Snow | 600, 602, 622 |
+|Rain&Snow |Mixed Rain and Snow |610, 615, 616|
+|Flurries |Flurries|623|
+|Mist |Mist |700, 701|
+|Smoke |Smoke |711|
+|Haze |Haze |721|
+|Sand/Dust |Sand/Dust |731|
+|Fog |Fog |741|
+|Frzng Fog |Freezing Fog |751|
+|Dust |Dust |761|
+|Clear Sky |Clear Sky |800|
+|Few Clouds |Few Clouds |801|
+|Sctrd Clds |Scattered Clouds |802|
+|Brkn Clds |Broken Clouds |803|
+|Overcast |Overcast |804|
+|Ukn Precip |Unknown Precipitation |900|
+|Undefined |Undefined |Undefined|
 
