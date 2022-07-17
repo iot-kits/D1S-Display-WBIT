@@ -55,23 +55,32 @@ These instructions are for the Remote Display kit for users without an IoT Kits 
    __MAKE SURE YOU UNDERSTAND THIS STEP BEFORE YOU CUT!__  
     *	Cut these pins: RST, D0, D5, D7, D8, TX, RX, D3, D4, 5V.  
     *	**DO NOT CUT THESE PINS:** D6, 3V3, G, D1, D2, A0.
-    * NOTE: D1, D2, and A0 are not used in this kit. D1 and D2 are for I2C sensors, A0 is for analog input. All are reserved for future use.
+    * NOTE: D6 is used for a DHT11 sensor if supplied. D1 and D2 are for I2C sensors such as the AHT10. A0 is an analog input not used in this kit. 
 <img src="/images/Figure 5 - cut leads.png" width="25%"/>
 
 10.	Replace the D1 Mini onto the back of the display unit. Observe the orientation so that pin RST of the D1 Mini engages with RST on the display board. All the pins must match.  
   __THE CORRECT ORIENTATION IS CRUCIAL!__  
   __DOUBLE CHECK THAT ALL PINS ARE CORRECTLY MATED WITH RST TO RST AND 5V to 5V, ETC.__  
     * The USB connector will line up with the hole on the side of the case.
-11. Place the leads of the jumper cable onto the DHT11 sensor pins. The the table in step 12 to record the wire color for each of the pins: +, OUT, and -. The wire colors are different in each kit. As an optional step, you may place a small blob of hot melt glue over the plastic part of the connectors to maintain their orientation if ever removed.
+11. The kit may be supplied with either a DHT11 or AHT10 temperature/humiidity sensor. The DHT10 has a proprietary bus using three connections. The AHT10 is an I2C device using four pins. Make the connections using the appropriate table in step 12. Place the leads of the jumper cable onto the  sensor pins. Record the color of each wire. The wire colors are different in each kit. As an optional step, you may place a small blob of hot melt glue over the plastic part of the connectors to maintain their orientation if ever removed. Do not place any glue on the metal spring portion of the connectors. Rotate the connector as needed.
 <img src="/images/Figure 7 - DHT11.png" width="25%"/>  
 
 12. Plug a Micro USB cable onto the D1 Mini USB connector through the opening in the side of the case. Feed the jumper cable through the oval slot in the rear case. Connect the jumper wires to the D1 Mini as shown in the table. If the connector is loose, try rotating it 90 degrees on the pin.
 
+**Connections for DHT11 (if supplied)**
 |DHT11 |D1 Mini|Your Wire Color|
-|:----:|:-----:|:-----:|
-| +    | 3V3   |       |
-| OUT  | D6    |       |
-| -    | G     |       |
+|:----:|:-----:|:-------------:|
+| +    | 3V3   |               |
+| OUT  | D6    |               |
+| -    | G     |               |
+
+**Connections for AHT10 (if supplied)**
+|AHT10|D1 Mini|Your Wire Color|
+|:----:|:-----:|:-------------:|
+| VIN  | 3V3   |               |
+| GND  | G     |               |
+| SCL  | D1    |               |
+| SDA  | D2    |               |
 
 <img src="/images/Figure 8 - Final connections.png" width="25%"/> 
 
