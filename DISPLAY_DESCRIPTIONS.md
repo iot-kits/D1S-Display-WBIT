@@ -4,15 +4,15 @@
 
 |Screen |Photo (click to enlarge)|Description|
 |----|:----:|----|
-|**Splash Screen**|<img src="/images/Splash Screen.jpg" width="100px"/>| <ul><li>Abbreviated firmware name </li> <li>Firmware version</li></ul> |
-|**Data Screen**|<img src="/images/Data Screen.jpg" width="100px">| <ul><li> Location latitude / logitude </li><li> Time zone abbreviation and Olson name </li> <li>Units (metric/imperial) and screen duration in seconds </li> <li>Other display information</li></ul>|
-|**Weather #1** |<img src="/images/First Weather Screen.jpg" width="100px"/> | <ul><li>Brief weather condition forecast – see list of weather conditions </li> <li>Current temperature </li> <li>Temperature forecast: Daytime High / Nighttime low  </li> <li>Probability of precipitation (rain or snow) forecast </li> <li>Accumulated amount of rain or snow forecast </li> <li>Ultraviolet Index maximum forecast – background color changes with level – see list of UV Index</li></ul>| 
-|**Weather #2**|<img src="/images/Second Weather Screen.jpg" width="100px"/> | <ul><li>Feels like high and low temperatures </li> <li>Wind direction and speed</li> <li>Wind gust speed </li> <li>Cloud cover in percent </li> <li>Barometric Pressure at Sea Level </li> <li>Relative Humidity in percent</li></ul>| 
-|**Almanac**|<img src="/images/Almanac Screen.jpg" width="100px"/> | <ul><li>Day and date</li> <li>Sun Rise local time (am)</li> <li>Sun Set local time (pm) </li> <li>Moon Phase</li></ul> |
-|**Digital Clock**|<img src="/images/Time-Temp Screen.jpg" width="100px"/> | <ul><li>Universal Coordinated Time (UTC) </li> <li>Local Time (24-hour) </li> <li>Indoor Temperature & Humidity</li></ul>| 
+|**Splash Screen**|<img src="/images/Splash Screen.jpg" width="200px"/>| <ul><li>Abbreviated firmware name </li> <li>Firmware version</li></ul> |
+|**Data Screen**|<img src="/images/Data Screen.jpg" width="200px">| <ul><li> Location latitude / logitude </li><li> Time zone abbreviation and Olson name </li> <li>Units (metric/imperial) and screen duration in seconds </li> <li>Other display information</li></ul>|
+|**Weather #1** |<img src="/images/First Weather Screen.jpg" width="200px"/> | <ul><li>Brief weather condition forecast – see list of weather conditions </li> <li>Current temperature </li> <li>Temperature forecast: Daytime High / Nighttime low  </li> <li>Probability of precipitation (rain or snow) forecast </li> <li>Accumulated amount of rain or snow forecast </li> <li>Ultraviolet Index maximum forecast – background color changes with level – see list of UV Index</li></ul>| 
+|**Weather #2**|<img src="/images/Second Weather Screen.jpg" width="200px"/> | <ul><li>Feels like high and low temperatures </li> <li>Wind direction and speed</li> <li>Wind gust speed </li> <li>Cloud cover in percent </li> <li>Barometric Pressure at Sea Level </li> <li>Relative Humidity in percent</li></ul>| 
+|**Almanac**|<img src="/images/Almanac Screen.jpg" width="200px"/> | <ul><li>Day and date</li> <li>Sun Rise local time (am)</li> <li>Sun Set local time (pm) </li> <li>Moon Phase</li></ul> |
+|**Digital Clock**|<img src="/images/Time-Temp Screen.jpg" width="200px"/> | <ul><li>Universal Coordinated Time (UTC) </li> <li>Local Time (24-hour) </li> <li>Indoor Temperature & Humidity</li></ul>| 
 |**Analog Clock**| | <ul><li>To Be Implemented</li></ul> | 
-|**Configuration**|<img src="/images/Config Screen.jpg" width = "100px"/>| <ul><li>Brief instructions for software configuration </li> <li>SSID is D1Sdisplay </li> <li>Portal URL is 192.168.4.1 </li></ul>|
-|**Firmware Update**|<img src="/images/Update Screen.jpg" width="100px"/> | <ul><li>Screen appears when Iot Kits has published a firmware update </li> <li>Do not turn off the unit during update </li></ul>|
+|**Configuration**|<img src="/images/Config Screen.jpg" width = "200px"/>| <ul><li>Brief instructions for software configuration </li> <li>SSID is D1Sdisplay </li> <li>Portal URL is 192.168.4.1 </li></ul>|
+|**Firmware Update**|<img src="/images/Update Screen.jpg" width="200px"/> | <ul><li>Screen appears when Iot Kits has published a firmware update </li> <li>Do not turn off the unit during update </li></ul>|
 
 ## Time and Weather Information
 The display shows time from the [National Institute of Standards and Technology (NIST)](https://en.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology). The time is automatically adjusted for standard and daylight saving for the [Olson time zone](https://en.wikipedia.org/wiki/Tz_database) based on the display's latitude and longitude. 
