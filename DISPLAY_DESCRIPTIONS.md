@@ -24,7 +24,7 @@ Reference: [www.weatherbit.io/api/codes](https://www.weatherbit.io/api/codes)
 
 Note that these weather observation codes are very similar to those used by [Open Weather Map](https://openweathermap.org/weather-conditions)
 
-|Screen Display |Condition | WeatherBit code |
+|Screen Display|Condition|WeatherBit code|
 |:---:|:---:|----|
 |Thundrstrm |Thunderstorm  | 200 - 233 |
 |Lte Drzzle |Light Drizzle | 300|
