@@ -2,8 +2,8 @@
 
 ## Descriptions of Displays
 
-|Screen |<div style="width:100px">Photo (Click to enlarge)</div> | |
-| --- | --- | --- |
+|Screen |Photo (click to enlarge)|Description|
+|----|:----:|----|
 |**Splash Screen**|<img src="/images/Splash Screen.jpg" width="100px"/>| <ul><li>Abbreviated firmware name </li> <li>Firmware version</li></ul> |
 |**Data Screen**|<img src="/images/Data Screen.jpg" width="25%">| <ul><li> Location latitude / logitude </li><li> Time zone abbreviation and Olson name </li> <li>Units (metric/imperial) and screen duration in seconds </li> <li>Other display information</li></ul>|
 |**Weather #1** |<img src="/images/First Weather Screen.jpg" width="25%"/> | <ul><li>Brief weather condition forecast – see list of weather conditions </li> <li>Current temperature </li> <li>Temperature forecast: Daytime High / Nighttime low  </li> <li>Probability of precipitation (rain or snow) forecast </li> <li>Accumulated amount of rain or snow forecast </li> <li>Ultraviolet Index maximum forecast – background color changes with level – see list of UV Index</li></ul>| 
