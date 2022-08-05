@@ -1,6 +1,5 @@
 // !!!DO NOT CHANGE!!!
 //! PlatformIO format
-const String FW_FILENAME  = "D1S-Display-WBIT";
 const String fwURLbase    = "https://w4krl.com/fota/";
 const String fwPath       = FW_FILENAME + "/";
 const String fwVersionURL = fwURLbase + fwPath + "version.h";
