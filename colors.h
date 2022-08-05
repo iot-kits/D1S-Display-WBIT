@@ -53,17 +53,18 @@ const int BRIGHT_SPARK      = 0xFE07;
 // *******************************************************
 
 // ANALOG CLOCK FRAME
-const int C_CLOCK_FRAME_EDGE    = RED;
-const int C_CLOCK_FRAME_BG      = GRAY;
-const int C_CLOCK_DIAL_BG       = WHITE;
-const int C_CLOCK_TZ            = YELLOW;      // timezone & AM/PM text
-const int C_CLOCK_DIAL_EDGE     = BLACK;
-const int C_CLOCK_DIAL_NUMERALS = BLACK;
-const int C_CLOCK_DIAL_TICKS    = BLACK;
-const int C_CLOCK_SEC_HAND      = ORANGERED;
-const int C_CLOCK_MIN_HAND      = BLUE;
-const int C_CLOCK_HOUR_HAND     = BLUE;
-const int C_CLOCK_HUB           = BLACK;       // prints over hands
+const int C_ANALOG_FRAME_EDGE    = RED;
+const int C_ANALOG_FRAME_BG      = GRAY;
+const int C_ANALOG_DIAL_BG       = WHITE;
+const int C_ANALOG_TZ            = YELLOW;      // timezone & AM/PM text
+const int C_ANALOG_DIAL_EDGE     = BLACK;
+const int C_ANALOG_DIAL_NUMERALS = BLACK;
+const int C_ANALOG_DIAL_TICKS    = BLACK;
+const int C_ANALOG_SEC_HAND      = ORANGERED;
+const int C_ANALOG_MIN_HAND      = BLUE;
+const int C_ANALOG_HOUR_HAND     = BLUE;
+const int C_ANALOG_HUB           = BLACK;       // prints over hands
+const int C_ANALOG_INDOOR        = RED;
 
 // DIGITAL CLOCK FRAME
 const int C_DIGITAL_FRAME_EDGE  = WHITE;
@@ -83,3 +84,5 @@ const int C_ALM_TOP_BG          = BLUE;
 const int C_ALM_TOP_TEXT        = YELLOW;
 const int C_ALM_BOTTOM_BG       = YELLOW;
 const int C_ALM_BOTTOM_TEXT     = BLUE;
+const int C_ALM_MOON_BG         = GRAY;
+const int C_ALM_MOON_FACE       = WHITE;
